@@ -1,6 +1,20 @@
 library(dplyr) #load dplyr package
 library(stringr) #load stringr package
 
+#import files
+	#test files
+	subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt", quote="\"", stringsAsFactors = FALSE)
+	X_test <- read.table("UCI HAR Dataset/test/X_test.txt", quote="\"", stringsAsFactors=FALSE)
+	y_test <- read.table("UCI HAR Dataset/test/y_test.txt", quote="\"", stringsAsFactors=FALSE)
+
+	#train files
+	subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", quote="\"", stringsAsFactors=FALSE)
+	X_train <- read.table("UCI HAR Dataset/train/X_train.txt", quote="\"", stringsAsFactors=FALSE)
+	y_train <- read.table("UCI HAR Dataset/train/y_train.txt", quote="\"", stringsAsFactors=FALSE)
+	
+	#variables
+	features <- read.table("UCI HAR Dataset/features.txt", quote="\"", stringsAsFactors=FALSE)
+	
 rNamesTest = y_test[,1] #assign vector with activity codes for the testing set
 rNamesTrain = y_train[,1] #assign vector with activity codes for the training set
 Features = as.character(features$V2) #assign variable names both sets
@@ -33,7 +47,7 @@ tidyUp = function(dataset, rowNames, colNames, subjects){
   a = y[,562:563] #create new df with only the activity and subjects
   b = select(y, contains("mean")) #df with only variables containing "mean"
   c = select(y, contains("std")) #df with only variables containing "std"
-  y = cbind(a,b,c) #column bind all the the activity and subject columns, with the mean df and the std df
+  y = cbind(a,b,c) #column bind all the activity and subject columns, with the mean df and the std df
   
   y = select(y, -contains("meanFreq"), -starts_with("angle")) #..and drop the weighted average and angle measurements
   
