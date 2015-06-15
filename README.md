@@ -23,10 +23,10 @@ The code begins with assigning variables that would then be used in a custom fun
   iv) The above three data frames are then binded by columns to created the format, ACTIVITY-SUBJECTS-[ALL MEANS]-[ALL STDs]
   v) Lastly, the weighted average and angle variables are then dropped from the final data set, due to the following points:
 
-    a) The measurements that were taken represent variables of feature vector pattern, which total to 17 measurements. 8 of which have 3-axial signals, which totals to 33 measurements.
-    b) A given set of 17 variables were then estimated out of the aforementioned 33 measurements. Variables that are, among other things, summary statistics of these measurements.
-    c) The final data set is required to have only the mean and standard deviation of each measurement. The information provided in the UCI feature_info file clearly mentions that the mean and standard deviation are the features affixed with mean() and std() in the features file.
-    d) With the above points in mind, all the columns containing the words meanFreq and angle were subsequently dropped as they do not represent the mean and standard deviation of the 33 measurements. 33 measurements, 2 variables of each, would result in a total of 66 variables.
+  a) The measurements that were taken represent variables of feature vector pattern, which total to 17 measurements. 8 of which have 3-axial signals, which totals to 33 measurements.
+  b) A given set of 17 variables were then estimated out of the aforementioned 33 measurements. Variables that are, among other things, summary statistics of these measurements.
+  c) The final data set is required to have only the mean and standard deviation of each measurement. The information provided in the UCI feature_info file clearly mentions that the mean and standard deviation are the features affixed with mean() and std() in the features file.
+  d) With the above points in mind, all the columns containing the words meanFreq and angle were subsequently dropped as they do not represent the mean and standard deviation of the 33 measurements. 33 measurements, 2 variables of each, would result in a total of 66 variables.
     
 5. The test and train data are then run through the function and the results are assigned to FinalTest and FinalTrain respectively, and subsequently binded by rows and named FinalSet. The FinalSet contains:
   
