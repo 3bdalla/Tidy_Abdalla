@@ -41,6 +41,6 @@ The code begins with assigning variables that would then be used in a custom fun
 
 ##SECTION 2##
 
-The final data frame that is created can be labeled as tidy data for the main reason that the columns represent each of the variables that were required for the analysis, namely the average of each mean and standard deviation of the original measurements; and also because the rows represent each observation for each activity and each subject. 
+The final data frame that is created can be described as tidy data for the reason that the columns represent each of the variables that were required for the analysis, namely the average of each mean and standard deviation of the original measurements; and also because the rows represent each observation for each activity and each subject. An argument can be made that the subject.activity might violate the Tidy Data rule of housing a single variable per column. However, the summarization of each activity and subject in the same dataframe does not allow for separate columns for subjects and activities; unless the data provided was transposed to a long format - in which case the variables would appear to be rows (observations), which would still be a violation of the tidy data principles. Given the summarization instructions that were given, and the data provided, the resulting data set that is created can still be classified as tidy data.
 
 ##_____##
