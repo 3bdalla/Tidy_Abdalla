@@ -66,3 +66,4 @@
 |  fBodyBodyAccJerkMag.std..  |             The mean of  the standard deviation of the the magnitude of the body acceleration frequency domain Jerk signals measured from the accelerometer, calculated using a Euclidean norm             |
 |    fBodyBodyGyroMag.std..   | The mean of  the standard deviation of the the magnitude of the gyroscope frequency domain signals, calculated using a Euclidean norm, and derived from the angluar velocity and body linear acceleration. |
 |  fBodyBodyGyroJerkMag.std.. |                      The mean of  the standard deviation of the the magnitude of the body frequency domain Jerk signals measured from the gyroscope, calculated using a Euclidean norm                     |
+|  subject.activity |                      Digits represent individual subjects, character strings, i.e. "WALKING", "LAYING" etc; represent type of activity.                     |
