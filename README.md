@@ -8,29 +8,29 @@ The first section explains the steps taken to arrive at the final data set. The 
 
 ### Section 1 ###
 
-The code begins with assigning variables that would then be used in a custom function that processes the following to a given set of parameters:
+1. The code begins with assigning variables that would then be used in a custom function that processes the following to a given set of parameters:
 
-1. Change the activity codes given in Y files to activity labels using a simple lookup table
-2. Bind the X data file with the activity labels and subject codes
-3. Takes the information in the features file and processes the following:
-
-  * Adds two more names in the features list called "activity" and "subjects". These will be the variable headers for the activity labels and subject codes, respectively.
-  * Converts all the names given in the features file, into syntactically valid names, using make.names()
-  * Takes this new features list and assigns it as the new column headers for the dataframe made in point No.2.
-
-4. The new dataframe now has activity, subjects, and variables included. It then processes the following:
-  
-  * The final two columns in the data set are the activity and subjects. These two columns are assigned to a different variable.
-  * A separate data frame is created that includes only the variables that contain the word "mean".
-  * Another separate data frame is that includes only the variable that contain the word "std".
-  * The above three data frames are then binded by columns to create a data frame with a format ACTIVITY-SUBJECTS-[ALL MEANS]-[ALL STDs]
-  * Lastly, the weighted average and angle variables are then dropped from the final data set, due to the following points:
-
-    * The measurements that were taken represent variables of feature vector pattern, which total to 17 measurements. 8 of which have a XYZ 3-axial signals, which totals to 33 measurements.
-    * A given set of 17 variables were then estimated out of the aforementioned 33 measurements. Variables that are, among other things, summary statistics of these measurements.
-    * The final data set is required to have only the **mean** and **standard deviation** of each measurement. The information provided in the UCI feature_info file clearly mentions that the mean and standard deviation are the features affixed with *mean()* and *std()* in the features file.
-    * With the above points in mind, all the columns containing the words *meanFreq* and *angle* were subsequently dropped as they do not represent the mean and standard deviation of the 33 measurements. 33 measurements, 2 variables of each, would result in a total of 66 variables.
-    
+ i. Change the activity codes given in Y files to activity labels using a simple lookup table
+ ii. Bind the X data file with the activity labels and subject codes
+ iii. Takes the information in the features file and processes the following:
+ 
+   * Adds two more names in the features list called "activity" and "subjects". These will be the variable headers for the activity labels and subject codes, respectively.
+   * Converts all the names given in the features file, into syntactically valid names, using make.names()
+   * Takes this new features list and assigns it as the new column headers for the dataframe made in point No.2.
+ 
+ 4. The new dataframe now has activity, subjects, and variables included. It then processes the following:
+   
+   * The final two columns in the data set are the activity and subjects. These two columns are assigned to a different variable.
+   * A separate data frame is created that includes only the variables that contain the word "mean".
+   * Another separate data frame is created that includes only the variable that contain the word "std".
+   * The above three data frames are then binded by columns to create a data frame with a format ACTIVITY-SUBJECTS-[ALL MEANS]-[ALL STDs]
+   * Lastly, the weighted average and angle variables are then dropped from the final data set, due to the following points:
+ 
+     * The measurements that were taken represent variables of feature vector pattern, which total to 17 measurements. 8 of which have a XYZ 3-axial signals, which totals to 33 measurements.
+     * A given set of 17 variables were then estimated out of the aforementioned 33 measurements. Variables that are, among other things, summary statistics of these measurements.
+     * The final data set is required to have only the **mean** and **standard deviation** of each measurement. The information provided in the UCI feature_info file clearly mentions that the mean and standard deviation are the features affixed with *mean()* and *std()* in the features file.
+     * With the above points in mind, all the columns containing the words *meanFreq* and *angle* were subsequently dropped as they do not represent the mean and standard deviation of the 33 measurements. 33 measurements, 2 variables of each, would result in a total of 66 variables.
+     
 5. The test and train data are then run through the function and the results are assigned to **FinalTest** and **FinalTrain** respectively, and subsequently binded by rows and named **FinalSet**. The FinalSet contains:
   
   * An activity column that's been appropriately converted to labels.
