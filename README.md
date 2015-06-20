@@ -38,7 +38,7 @@ The first section explains the steps taken to arrive at the final data set. The 
   * Appropriate column names per variable.
 
 6. Using a combination of the *summarise_each()* and *group_by()* functions, the dataframe summarises each column by activities, and averages the measurements. This is then assigned to x. The same thing is then done once more, but summarized for subjects instead of activities. This is then assigned to y.
-7. The second columns are then removed for each x and y because the second columns show a summary of the activity column (for the x data frame) and the subject column (for the y dataframe). In order to show tidy data, those columns need to be removed in order to show meaningful variables in the final data set.
+7. The second column is then removed for each x and y because the second columns show a summary of the activity column (for the x data frame) and the subject column (for the y dataframe). In order to show tidy data, those columns need to be removed in order to show meaningful variables in the final data set.
 8. Both x and y are then binded by rows after having changed the first column in x to class character, and renamed the first column for both x and y to the same name. The resulting data frame is then assigned to the variable **TidyFinal**, which is the complete tidy data set.
 
 ### _____ ###
