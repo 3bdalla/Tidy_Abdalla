@@ -11,14 +11,16 @@ The first section explains the steps taken to arrive at the final data set. The 
 1. The code begins with assigning variables that would then be used in a custom function that processes the following to a given set of parameters:
 
  i. Change the activity codes given in Y files to activity labels using a simple lookup table
+ 
  ii. Bind the X data file with the activity labels and subject codes
+ 
  iii. Takes the information in the features file and processes the following:
  
   * Adds two more names in the features list called "activity" and "subjects". These will be the variable headers for the activity labels and subject codes, respectively.
   * Converts all the names given in the features file, into syntactically valid names, using make.names()
   * Takes this new features list and assigns it as the new column headers for the dataframe made in point No.2.
  
- ii. The resulting dataframe now has activity, subjects, and variables included. It then processes the following:
+ iv. The resulting dataframe now has activity, subjects, and variables included. It then processes the following:
   * The final two columns in the data set are the activity and subjects. These two columns are assigned to a different variable.
   * A separate data frame is created that includes only the variables that contain the word "mean".
   * Another separate data frame is created that includes only the variable that contain the word "std".
