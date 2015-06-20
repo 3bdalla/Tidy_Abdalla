@@ -30,7 +30,7 @@ The first section explains the steps taken to arrive at the final data set. The 
     * The final data set is required to have only the **mean** and **standard deviation** of each measurement. The information provided in the UCI feature_info file clearly mentions that the mean and standard deviation are the features affixed with *mean()* and *std()* in the features file.
     * With the above points in mind, all the columns containing the words *meanFreq* and *angle* were subsequently dropped as they do not represent the mean and standard deviation of the 33 measurements. 33 measurements, 2 variables of each, would result in a total of 66 variables.
 
-5. The test and train data are then run through the function and the results are assigned to **FinalTest** and **FinalTrain** respectively, and subsequently binded by rows and named **FinalSet**. The FinalSet contains:
+5. The test and train data are then run through the `tidyUp()` function and the results are assigned to **FinalTest** and **FinalTrain** respectively, and subsequently binded by rows and named **FinalSet**. The FinalSet contains:
   
   * An activity column that's been appropriately converted to labels.
   * A subject code column.
