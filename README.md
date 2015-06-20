@@ -18,7 +18,7 @@ The first section explains the steps taken to arrive at the final data set. The 
   * Converts all the names given in the features file, into syntactically valid names, using make.names()
   * Takes this new features list and assigns it as the new column headers for the dataframe made in point No.2.
  
- ii. The new dataframe now has activity, subjects, and variables included. It then processes the following:
+ ii. The resulting dataframe now has activity, subjects, and variables included. It then processes the following:
   * The final two columns in the data set are the activity and subjects. These two columns are assigned to a different variable.
   * A separate data frame is created that includes only the variables that contain the word "mean".
   * Another separate data frame is created that includes only the variable that contain the word "std".
