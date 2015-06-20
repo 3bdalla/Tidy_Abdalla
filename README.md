@@ -25,9 +25,9 @@ The first section explains the steps taken to arrive at the final data set. The 
   * The above three data frames are then binded by columns to create a data frame with a format ACTIVITY-SUBJECTS-[ALL MEANS]-[ALL STDs]
   * Lastly, the weighted average and angle variables are then dropped from the final data set, due to the following points:
  
-   * The measurements that were taken represent variables of feature vector pattern, which total to 17 measurements. 8 of which have a XYZ 3-axial signals, which totals to 33 measurements.
-   * A given set of 17 variables were then estimated out of the aforementioned 33 measurements. Variables that are, among other things, summary statistics of these measurements.
-   * The final data set is required to have only the **mean** and **standard deviation** of each measurement. The information provided in the UCI feature_info file clearly mentions that the mean and standard deviation are the features affixed with *mean()* and *std()* in the features file.
+    * The measurements that were taken represent variables of feature vector pattern, which total to 17 measurements. 8 of which have a XYZ 3-axial signals, which totals to 33 measurements.
+    * A given set of 17 variables were then estimated out of the aforementioned 33 measurements. Variables that are, among other things, summary statistics of these measurements.
+    * The final data set is required to have only the **mean** and **standard deviation** of each measurement. The information provided in the UCI feature_info file clearly mentions that the mean and standard deviation are the features affixed with *mean()* and *std()* in the features file.
    * With the above points in mind, all the columns containing the words *meanFreq* and *angle* were subsequently dropped as they do not represent the mean and standard deviation of the 33 measurements. 33 measurements, 2 variables of each, would result in a total of 66 variables.
 
 5. The test and train data are then run through the function and the results are assigned to **FinalTest** and **FinalTrain** respectively, and subsequently binded by rows and named **FinalSet**. The FinalSet contains:
