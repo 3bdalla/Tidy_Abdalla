@@ -71,3 +71,4 @@ colnames(x)[1] = "subject.activity" #Change variable names for both dfs, in orde
 colnames(y)[1] = "subject.activity"
 
 TidyFinal = rbind(x,y) #Bind both x and y dfs by rows, and assign completed df. 
+write.table(TidyFinal, "TidyFinal.txt", row.names = FALSE) #export final data set into working directory
