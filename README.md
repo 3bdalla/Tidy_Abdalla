@@ -4,6 +4,8 @@ The run_analysis.R script provided creates a tidy data frame using the train and
 
 The script assumes that the data files were extracted in to the working directory as they were arranged and located in the zip file provided in the Coursera project guidelines, i.e. there should be a folder named UCI HAR Dataset with the subfolders "test" and "train"; just like in the zip file.
 
+The script also assumes that the `dplyr` and `stringr` packages are already installed.
+
 The first section explains the steps taken to arrive at the final data set. The second section elaborates on why this is indeed in accordance with the principles of Tidy Data.
 
 ### Section 1 ###
