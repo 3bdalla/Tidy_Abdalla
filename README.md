@@ -1,6 +1,6 @@
 ## Preface ##
 
-The run_analysis.R script provided creates a tidy data frame using the train and test data provided by the University of California Irvine's human activity recognition experiments. The script creates a data frame that contains averages of all the means and standard deviation of the original measurements compiled by UCI, for each subject and also for each activity. More information on the raw information can be found on UCI's machine learning repository at their website  [here.](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+The **run_analysis.R** script provided creates a tidy data frame using the train and test data provided by the University of California Irvine's human activity recognition experiments. The script creates a data frame that contains averages of all the means and standard deviation of the original measurements compiled by UCI, for each subject and also for each activity. More information on the raw information can be found on UCI's machine learning repository at their website  [here.](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 The script assumes that the data files were extracted in to the working directory as they were arranged and located in the zip file provided in the Coursera project guidelines, i.e. there should be a folder named UCI HAR Dataset with the subfolders "test" and "train"; just like in the zip file.
 
